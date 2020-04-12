@@ -18,7 +18,7 @@ import {
   ListItem
 } from "./styleComponent";
 
-const A11yDropDown = function ({
+const A11yDropDown = function({
   id,
   label,
   options,
@@ -43,7 +43,7 @@ const A11yDropDown = function ({
     setIsActive(false);
   };
 
-  useLayoutEffect(function () {
+  useLayoutEffect(function() {
     if (isActive) {
       if (activeIndex < 0) {
         adjustScrollPosition(`${id}-list`, `${id}-item-${lastSelectedValue}`);
@@ -73,7 +73,7 @@ const A11yDropDown = function ({
         return item.toLowerCase();
       })
       //sort the whole array
-      .sort(function (a, b) {
+      .sort(function(a, b) {
         if (a > b) {
           return 1;
         }
